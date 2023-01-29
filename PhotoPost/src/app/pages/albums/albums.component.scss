@@ -1,0 +1,14 @@
+.album-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.albums-info {
+    font-size: 30px;
+    padding: 2%;
+    font-weight: bold;
+    color: rgb(26, 32, 32);
+}

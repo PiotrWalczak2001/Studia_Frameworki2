@@ -1,0 +1,8 @@
+
+<div class="photo-covers">
+    <app-photo-cover 
+    *ngFor="let photo of albumPhotos | async"
+    [photo]="photo"
+    >
+    </app-photo-cover>
+</div>

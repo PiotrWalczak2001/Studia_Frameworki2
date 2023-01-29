@@ -1,0 +1,11 @@
+<div class="albums-info">
+    <span> All albums</span>
+</div>
+<div class="album-cards">
+
+    <app-album-cover 
+    *ngFor="let album of albums | async"
+    [album]="album"
+    >
+    </app-album-cover>
+</div>

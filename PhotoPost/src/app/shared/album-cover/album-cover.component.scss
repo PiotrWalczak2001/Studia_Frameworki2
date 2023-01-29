@@ -1,0 +1,26 @@
+.album-cover-card {
+    width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(26, 32, 32);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.album-cover-image {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    padding: 10%;
+    width: 300px;
+    height: 300px;
+}
+
+.album-cover-card:hover {
+    background-color: rgb(207, 255, 255);
+}
