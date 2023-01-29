@@ -12,6 +12,5 @@ export class PhotoCoverComponent {
   constructor(){}
 
   ngOnInit() {
-    console.log(this.photo);
   }
 }

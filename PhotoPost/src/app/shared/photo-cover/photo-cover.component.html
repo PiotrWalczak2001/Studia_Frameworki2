@@ -1,11 +1,10 @@
 <div class="photo-cover-card">
     <div>
         <div class="photo-cover-image">
-          <img [src]="photo?.thumbnailUrl ?? ''"/>
+          <img [src]="photo?.url ?? ''"/>
         </div>
         <div>
             <p class="card-title">{{ photo?.title?.slice(0,25) }}...</p>
         </div>
-
       </div>
 </div>

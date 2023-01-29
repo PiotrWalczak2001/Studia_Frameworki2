@@ -1,7 +1,15 @@
-<nav>
+<login-panel *ngIf="!logged"
+(loginClicked)="login()"
+>
+</login-panel>
+
+<nav
+*ngIf="logged"
+>
   <div class="nav-wrapper black">
     <a routerLink="/">Albums</a>
-    <a routerLink="/">Posts</a>
+    <a routerLink="photos">Photos</a>
+    <a routerLink="posts/">Posts</a>
     <a routerLink="/">Profile</a>
   </div>
 </nav>

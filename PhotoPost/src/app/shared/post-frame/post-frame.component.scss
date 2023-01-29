@@ -1,0 +1,46 @@
+.post-frame-card {
+    flex: 1 0 calc(33.33% - 16px);
+    margin: 0 0px 16px;
+    height: 400px;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(217,255,242,0.66) 0%, rgba(207,255,255,1) 100%);
+    box-shadow: 3px 3px 2px 1px rgba(71, 71, 245, 0.2);
+}
+
+.text-content {
+    display: block;
+    text-align: left;
+    height: 60%;
+    //background-color: rgb(207, 255, 255);
+}
+
+.post-body {
+    text-transform: lowercase;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.post-title {
+    text-align: center;
+    font-weight: 600;
+    text-transform: lowercase;
+    font-size: 18px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.comment-section {
+    height: 40%;
+    width: 100%;
+    text-align: left;
+    //background-color: rgb(207 255 242 / 66%);
+}
+
+.post-title::first-letter {
+    text-transform: uppercase;
+}
+
+.post-body::first-letter {
+    text-transform: uppercase;
+}

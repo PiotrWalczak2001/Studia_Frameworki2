@@ -1,0 +1,10 @@
+<div class="photos-info">
+    <span> All photos</span>
+</div>
+<div class="photo-covers">
+    <app-photo-cover 
+    *ngFor="let photo of photos | async"
+    [photo]="photo"
+    >
+    </app-photo-cover>
+</div>
