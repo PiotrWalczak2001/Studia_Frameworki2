@@ -13,18 +13,46 @@
     background-color: rgb(128 131 255);
     z-index: 1000;
     font-weight: bold;
-    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 a {
+    font-size: 18px;
     text-decoration: none;
     color: rgb(26, 32, 32);
     padding-right: 1%;
+    transition: 200ms color;
 }
 
 a:hover {
-    color: rgb(49, 80, 80);
+    color: rgb(207, 255, 255);
+}
+
+.logout-button {
+    background:rgb(23, 23, 34);
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: rgb(207, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 6px 9px;
+    width: 100px;
+    border: 0;
+    transition: 200ms color;
+}
+
+.logout-button:hover {
+    color: rgb(128 131 255);
+}
+
+.name-link {
+    font-size: 18px;
+    color: rgb(207, 255, 255);
 }

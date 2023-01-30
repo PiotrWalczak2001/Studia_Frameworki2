@@ -16,4 +16,8 @@ export class PostBoardComponent implements OnInit {
   ngOnInit() {
     this.posts = this.postService.getAllPosts().pipe(map(posts => posts.slice(0,100)));
   }
+
+  sendPost() {
+    
+  }
 }

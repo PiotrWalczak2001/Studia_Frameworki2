@@ -7,10 +7,12 @@
 *ngIf="logged"
 >
   <div class="nav-wrapper black">
+    <a class="name-link" routerLink="/">PhotoPost</a>
     <a routerLink="/">Albums</a>
     <a routerLink="photos">Photos</a>
-    <a routerLink="posts/">Posts</a>
-    <a routerLink="/">Profile</a>
+    <a routerLink="posts">Posts</a>
+    <a routerLink="profile">Profile</a>
+    <button class="logout-button" (click)="logout()">Logout</button>
   </div>
 </nav>
 

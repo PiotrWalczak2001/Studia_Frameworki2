@@ -14,12 +14,12 @@
     align-items: center;
     top: 5%;
     left: 30%;
-    background: rgb(126,255,255);
-    background: linear-gradient(0deg, rgba(126,255,255,1) 100%, rgba(122,255,219,0.66) 100%);
+    background-color: rgb(23, 23, 34);
     width: 40%;
     height: 90%;
     font-size: 16px;
     z-index: 3;
+    border-radius: 20px;
 }
 
 .login-inputs {
@@ -44,11 +44,11 @@ input:focus {
     width: 250px;
 }
 
-.login-button  {
+.login-button {
   margin-top: 50px;
   background:rgb(128 131 255);
   border-radius: 999px;
-  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-shadow: rgb(128 131 255) 0 10px 20px -10px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
@@ -60,7 +60,13 @@ input:focus {
   padding: 8px 18px;
   width: 200px;
   border: 0;
+  transition: 200ms color;
 }
+
+.login-button:hover {
+    color: rgb(23, 23, 34);
+}
+
 .text-wrapper {
     text-align: center;
 }
@@ -72,6 +78,7 @@ input:focus {
 }
 
 .text-below {
+    color: rgb(207, 255, 255);
     font-weight: 300;
     font-size: 24px;
     margin-bottom: 110px;

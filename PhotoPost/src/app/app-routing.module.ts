@@ -5,14 +5,16 @@ import { AlbumsComponent } from './pages/albums/albums.component';
 import { AlbumComponent } from './pages/albums/album/album.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { PostBoardComponent } from './pages/post-board/post-board.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
   { path: 'albums', component: AlbumsComponent },
+  { path: 'album/:id', component: AlbumComponent},
   { path: 'photos', component: PhotosComponent },
   { path: 'posts', component: PostBoardComponent },
-  { path: 'album/:id', component: AlbumComponent},
+  { path: 'profile', component: ProfileComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

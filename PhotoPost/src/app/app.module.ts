@@ -14,6 +14,7 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { PostBoardComponent } from './pages/post-board/post-board.component';
 import { PostFrameComponent } from './shared/post-frame/post-frame.component';
 import { LoginPanelComponent } from './pages/login-panel/login-panel.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginPanelComponent } from './pages/login-panel/login-panel.component';
     PhotosComponent,
     PhotoCoverComponent,
     PostBoardComponent,
-    PostFrameComponent
+    PostFrameComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
