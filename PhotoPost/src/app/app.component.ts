@@ -9,7 +9,7 @@ export class AppComponent {
   logged = false;
 
   ngOnInit() {
-    //this.logged = true; // for develop test
+    this.logged = true; // for develop test
   }
 
   login() {
