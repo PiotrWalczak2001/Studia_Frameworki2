@@ -15,6 +15,9 @@ import { PostBoardComponent } from './pages/post-board/post-board.component';
 import { PostFrameComponent } from './shared/post-frame/post-frame.component';
 import { LoginPanelComponent } from './pages/login-panel/login-panel.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { PostCommentComponent } from './shared/post-frame/post-comment/post-comment.component';
+import { FilterBarComponent } from './shared/filter-bar/filter-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,17 @@ import { ProfileComponent } from './pages/profile/profile.component';
     PhotoCoverComponent,
     PostBoardComponent,
     PostFrameComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostCommentComponent,
+    FilterBarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

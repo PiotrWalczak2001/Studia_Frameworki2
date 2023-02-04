@@ -1,11 +1,17 @@
-<div class="albums-info">
-    <span> All albums</span>
-</div>
-<div class="album-cards">
+<app-filter-bar
+(filter)="filterAlbums($event)"
+placeholder="User id"
+>
+</app-filter-bar>
 
-    <app-album-cover 
-    *ngFor="let album of albums | async"
-    [album]="album"
-    >
-    </app-album-cover>
+<div class="main-wrapper">
+    <div class="album-cards">
+        <app-album-cover 
+        class="album-cover"
+        *ngFor="let album of albums | async"
+        [album]="album"
+        (deleteAlbum)="deleteAlbumById($event)"
+        >
+        </app-album-cover>
+    </div>
 </div>

@@ -1,6 +1,9 @@
-<div class="photos-info">
-    <span> All photos</span>
-</div>
+<app-filter-bar
+(filter)="filterPhotos($event)"
+placeholder="Album id"
+>
+</app-filter-bar>
+
 <div class="photo-covers">
     <app-photo-cover 
     *ngFor="let photo of photos | async"

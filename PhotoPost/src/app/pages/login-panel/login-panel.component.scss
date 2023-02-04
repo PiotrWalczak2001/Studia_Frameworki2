@@ -25,6 +25,7 @@
 .login-inputs {
     display: flex;
     flex-direction: column;
+    color: #FFFFFF;
 }
 
 input {
@@ -36,6 +37,7 @@ input {
     height: 30px;
     background: none;
     transition: width 200ms;
+    color: rgb(128 131 255);
 }
 
 input:focus {

@@ -1,7 +1,13 @@
+<app-filter-bar
+(filter)="filterPosts($event)"
+placeholder="User id"
+>
+</app-filter-bar>
+
 <div class="add-post-frame">
     <input type="text" placeholder="Title">
     <textarea placeholder="Write something..."></textarea>
-    <button class="send-button" (click)="sendPost()">Send</button>
+    <button class="send-button">Send</button>
 </div>
 <div class="post-frame">
     <app-post-frame 

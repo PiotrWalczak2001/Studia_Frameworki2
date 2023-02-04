@@ -1,16 +1,23 @@
 <div class="post-frame-card">
     <div class="text-content">
-        <div>
+        <div class="title-wrapper">
             <p  class="post-title"> {{ post?.title }}</p>
         </div>
-        <div>
+        <div class="body-wrapper">
             <p  class="post-body"> {{ post?.body }} </p>
         </div>
     </div>
     <div class="comment-section">
-        <div>
+        <div class="comment-cards">
+            <app-post-comment
+            *ngFor="let comment of comments | async"
+            [comment]="comment"
+            >
+            </app-post-comment>
         </div>
-        <div>
+        <div class="comment-input">
+            <textarea placeholder="Comment yourself"></textarea>
+            <button class="comment-button">Send</button>
         </div>
     </div>
 </div>

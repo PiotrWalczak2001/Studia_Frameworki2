@@ -1,18 +1,33 @@
 <div class="album-cover-card">
-    <a [routerLink]="['/album', album?.id]">
-        <div>
-            <div class="album-cover-image">
-              <img src='assets/images/pexels-lisa-fotios-2090881.jpg'/>
-            </div>
-            <div>
-                <p class="card-title">{{ album?.title?.slice(0,25) }}...</p>
-            </div>
-            <div class="album-cover-icons">
-              <p>
-                <fa-icon class="faicon eye-icon" [icon]="faEye"></fa-icon>
-                {{ viewCount }}
-              </p>
-          </div>
-          </div>
-    </a>
+  <div class="content-wrapper">
+    <div class="album-image-wrapper">
+      <img class="album-image" src='assets/images/pexels-lisa-fotios-2090881.jpg'/>
+    </div>
+    <div class="album-info">
+      <div class="album-title">
+        <span>{{ album?.title }}</span>
+      </div>
+      <div class="album-user-info">
+        <span>{{user?.email}}</span> 
+      </div>
+      <div class="counter-wrapper">
+        <p>
+          <fa-icon class="faicon eye-icon" [icon]="faEye"></fa-icon>
+          {{ viewCount }}
+        </p>
+      </div>
+    </div>
   </div>
+  <div class="buttons-wrapper">
+    <button class="goto-button album-button" 
+      [routerLink]="['/album', album?.id]">
+      Check album
+    </button>
+
+    <button class="delete-button album-button"
+      *ngIf="user?.id === 1" 
+      (click)="removeAlbum(album?.id ?? 0)">
+      Delete
+    </button>
+  </div>
+</div>

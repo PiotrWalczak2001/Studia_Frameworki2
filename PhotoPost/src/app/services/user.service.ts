@@ -9,7 +9,11 @@ import { User } from '../models/user';
 export class UserService {
   constructor(private httpClient: HttpClient) {}
 
-  getUserById(userId: number): Observable<any> {
-    return this.httpClient.get<any>('https://jsonplaceholder.typicode.com/users/' + userId);
+  getUserById(userId: number): Observable<User> {
+    return this.httpClient.get<User>('https://jsonplaceholder.typicode.com/users/' + userId);
+  }
+
+  getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users/');
   }
 }
