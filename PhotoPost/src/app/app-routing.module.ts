@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'album/:id', component: AlbumComponent},
   { path: 'photos', component: PhotosComponent },
   { path: 'posts', component: PostBoardComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:userId', component: ProfileComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

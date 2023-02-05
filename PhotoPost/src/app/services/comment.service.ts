@@ -13,6 +13,10 @@ export class CommentService {
     return this.httpClient.get<Comment[]>('https://jsonplaceholder.typicode.com/comments');
   }
 
+  getAllCommentsLength(): Observable<number> {
+    return this.getAllComments().pipe(map(comments => comments.length));
+  }
+
   getCommentsByPostId(postId: number): Observable<Comment[]> {
     return this.getAllComments().pipe(
         map(comments => comments.filter(comment => comment.postId === postId)));

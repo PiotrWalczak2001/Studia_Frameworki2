@@ -34,7 +34,6 @@
         .post-title::first-letter {
             text-transform: uppercase;
         }
-        
     }
 
     .body-wrapper {
@@ -49,6 +48,50 @@
 
         .post-body::first-letter {
             text-transform: uppercase;
+        }
+    }
+
+    .bottom-bar {
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .author-wrapper {
+            display: flex;
+            flex-direction: row;
+
+            .author-prop {
+                font-weight: bold;
+                color: rgb(99, 101, 216);
+                margin-right: 5px;
+            }
+        }
+
+        .delete-post-wrapper {
+            margin-left: 20px;
+            height: 100%;
+            width: 15%;
+
+            .delete-post-button {
+                margin-top: 3%;
+                height: 80%;
+                border-radius: 999px;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 10px;
+                opacity: 1;
+                outline: 0 solid transparent;
+                padding: 8px 18px;
+                word-break: break-word;
+                border: 0;
+                background: rgb(216, 99, 105);
+            }
         }
     }
 }

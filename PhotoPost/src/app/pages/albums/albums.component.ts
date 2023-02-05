@@ -30,7 +30,6 @@ export class AlbumsComponent implements OnInit {
     if(isFullNumber){
       const id = Number(filterValue);
       const newAlbums = this.albumService.getAllAlbums();
-      newAlbums.subscribe(x => console.log(x));
       newAlbums.pipe( 
         map( albums => { return albums.filter(album => album.userId === id) }),
         ).subscribe(result => this.albums = of(result))

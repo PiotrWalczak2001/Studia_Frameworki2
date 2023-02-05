@@ -1,7 +1,13 @@
 <div class="comment-content">
-    <div class="name-wrapper">
-        <p  class="comment-name"> {{ comment?.email }}</p>
+    <div class="top-bar">
+        <div class="email-wrapper">
+            <p  class="comment-email"> {{ comment?.email }}</p>
+        </div>
+        <div class="delete-comment-wrapper" *ngIf="comment?.email === 'Sincere@april.biz'">
+            <button class="delete-button" (click)="deleteCommentClick(comment?.id ?? 0)">X</button>
+        </div>
     </div>
+
     <div class="body-wrapper">
         <p  class="comment-body"> {{ comment?.body }} </p>
     </div>

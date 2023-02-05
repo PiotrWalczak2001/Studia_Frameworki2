@@ -3,10 +3,41 @@
     background-color: rgb(188 229 229);
     font-size: 13px;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    
 
-    .name-wrapper {
-        color: rgb(99, 101, 216);
+    .top-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 20px;
+        width: 100%;
+
+        .email-wrapper {
+            font-size: 16px;
+            justify-self: flex-start;
+            color: rgb(99, 101, 216);
+        }
+
+        .delete-comment-wrapper {
+            width: 10%;
+
+            .delete-button {
+                background: none;
+                border: none;
+                border-radius: 999px;
+                color: #fff;
+                background: rgb(216, 99, 105);
+                font-size: 14px;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
     }
+
 
     .body-wrapper {
         margin-top: 5px;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Album } from '../models/album';
 
 @Injectable({
@@ -15,5 +15,10 @@ export class AlbumService {
 
   getAlbumById(id: number): Observable<Album> {
     return this.httpClient.get<Album>('https://jsonplaceholder.typicode.com/albums/' + id);
+  }
+
+  getAlbumsByUserId(id: number): Observable<Album[]> {
+    return this.getAllAlbums().pipe(
+        map(albums => albums.filter(album => album.userId === id)));
   }
 }

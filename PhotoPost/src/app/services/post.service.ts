@@ -13,4 +13,8 @@ export class PostService {
     return this.httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
   }
 
+  getPostsByUserId(id: number): Observable<Post[]> {
+    return this.getAllPosts().pipe(
+        map(posts => posts.filter(post => post.userId === id)));
+  }
 }

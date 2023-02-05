@@ -1,1 +1,74 @@
-Profile
+
+<div class="wrapper">
+    <div class="user-info-wrapper">
+        <div class="user-image-wrapper">
+            <img class="user-image" src="assets/images/user-g6cc8e40fa_640.png">
+        </div>
+        <div class="user-info" *ngIf="(user | async) as userInfo">
+            <div class="text-info">
+                <span class="info-property">Username: </span>
+                <span class="info-data">{{ userInfo.username }}</span>
+            </div>
+
+            <div class="text-info">
+                <span class="info-property">Name: </span>
+                <span class="info-data">{{ userInfo.name }}</span>
+            </div>
+
+            <div class="text-info">
+                <span class="info-property">Email: </span>
+                <span class="info-data">{{ userInfo.email }}</span>
+            </div>
+
+            <div class="text-info" *ngIf="userInfo.id === 1">
+                <span class="info-property">Phone: </span>
+                <span class="info-data">{{ userInfo.phone }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-content">
+        <div class="content-tabs">
+            <button class="tab-button" (click)="getAlbumsTab()">Albums</button>
+            <button class="tab-button" (click)="getPhotosTab()">Photos</button>
+            <button class="tab-button" (click)="getPostsTab()">Posts</button>
+        </div>
+        
+        <div class="main-content">
+            <div *ngIf="showAlbums">
+                <div class="album-cards">
+                    <app-album-cover 
+                        class="album-cover"
+                        *ngFor="let album of albums | async"
+                        [album]="album"
+                        (deleteAlbum)="deleteAlbumById($event)"
+                    >
+                    </app-album-cover>
+                </div>
+            </div>
+            
+            <div *ngIf="showPhotos">
+                <div class="photo-covers">
+                    <app-photo-cover 
+                        *ngFor="let photo of photos | async"
+                        [photo]="photo"
+                    >
+                    </app-photo-cover>
+                </div>
+            </div>
+            
+            <div *ngIf="showPosts">
+                <div class="post-frames">
+                    <app-post-frame
+                        class="post-frame"
+                        *ngFor="let post of posts | async"
+                        [post]="post"
+                        (deletePost)="deletePost($event)"
+                    >
+                    </app-post-frame>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

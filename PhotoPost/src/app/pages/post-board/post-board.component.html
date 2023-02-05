@@ -5,14 +5,15 @@ placeholder="User id"
 </app-filter-bar>
 
 <div class="add-post-frame">
-    <input type="text" placeholder="Title">
-    <textarea placeholder="Write something..."></textarea>
-    <button class="send-button">Send</button>
+    <input type="text" [(ngModel)]="title" placeholder="Title">
+    <textarea [(ngModel)]="content" placeholder="Write something..."></textarea>
+    <button class="send-button" (click)="sendPost()">Send</button>
 </div>
 <div class="post-frame">
     <app-post-frame 
     *ngFor="let post of posts | async"
     [post]="post"
+    (deletePost)="deletePost($event)"
     >
     </app-post-frame>
 </div>
